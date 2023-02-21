@@ -8,8 +8,8 @@ on:
 
 env:
   ENDPOINT: '-X POST "https://api.cloudflare.com/client/v4/zones/d2e506291d9ba32c75201adc22d31f3a/purge_cache"'
-  EMAIL: '-H "X-Auth-Email: ${{ SECRETS.EMAIL }}"'
-  CURL_AUTH: '-H "Authorization: Bearer ${{ SECRETS.PURGE_CACHE }}"'
+  EMAIL: '-H "X-Auth-Email: ${{ SECRETS.EMAIL_API }}"'
+  CURL_AUTH: '-H "Authorization: Bearer ${{ SECRETS.PURGE_API }}"'
   CURL_CONTENT: '-H "Content-Type: application/json"'
   CURL_DATA: --data '{"purge_everything":true}'
   
